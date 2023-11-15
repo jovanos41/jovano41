@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rede de canais</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    
+    <link rel="stylesheet" href="onlaine3.css">
+
+</head>
+<body>
+    <div>
+        <video id="video" controls></video>  
+        <script>
+
+            var video = document.getElementById('video');
+            if(Hls.isSupported()) {
+              var hls = new Hls();
+              hls.loadSource('https://s.m3u9.top/a2/hls1/ufcfightpass/__index.m3u8?mu3zAQc9HC3GbwJq=hdSgwPC7yQ1TzQ2ymSe-6A&3U1G7qaTxrPbalZnEx=1697614830');
+              hls.attachMedia(video);
+              video.play();
+            }
+            else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+              video.src = 'https://s.m3u9.top/a2/hls1/ufcfightpass/__index.m3u8?mu3zAQc9HC3GbwJq=hdSgwPC7yQ1TzQ2ymSe-6A&3U1G7qaTxrPbalZnEx=1697614830';
+              video.addEventListener('loadedmetadata',function() {
+                video.play();
+              });
+            }
+          
+           
+</script>
+
+    <a href="index.html">voltar</a>
+    
+</body>
+
+</html>

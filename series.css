@@ -1,0 +1,43 @@
+
+.container{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 25px;
+}
+.elemento{
+    display: flex;
+    justify-content: space-between;
+    width: 184.5px;
+    height: 333.55px;
+    background-color: lightgreen;;
+    border: 1px solid black
+    disp
+    
+}
+body{
+   background-image: url(img/vingadores.jpg);
+    color: red;
+}
+
+.elemento li:hover{
+    transform: translateY(-5px);
+    transition: all 8.5s;
+}
+button{
+    background-color: aquamarine;
+    color: black;
+}
+
+.div{
+    display: flex;
+    justify-content: space-between;
+    width: 184.5px;
+    height: 333.55px;
+    background-color: gray;;
+    
+}
+a{
+    color: white;
+}
+

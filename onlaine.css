@@ -1,0 +1,7 @@
+body{
+    background-image: url(img/vingadores.jpg);
+     
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+ }

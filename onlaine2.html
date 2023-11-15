@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play .m3u8 File in HTML5 video player</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+   <div>
+    <video id="video" controls></video>
+
+<!-- Use hls.js to create a player and load the .m3u8 file -->
+<script>
+  var video = document.getElementById('video');
+  if(Hls.isSupported()) {
+    var hls = new Hls();
+    hls.loadSource('https://s.m3u9.top/a2/hls1/combate/__index.m3u8?mu3zAQc9HC3GbwJq=3cO7XN8uwtwnJv8gW-3nnw&3U1G7qaTxrPbalZnEx=1697446541');
+    hls.attachMedia(video);
+    video.play();
+  }
+  else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+    video.src = 'https://s.m3u9.top/a2/hls1/combate/__index.m3u8?mu3zAQc9HC3GbwJq=3cO7XN8uwtwnJv8gW-3nnw&3U1G7qaTxrPbalZnEx=1697446541';
+    video.addEventListener('loadedmetadata',function() {
+      video.play();
+    });
+  }
+ 
+</script>
+
+</body>
+<button>
+<a href="index.html">voltar</a>
+</button>
+</html>

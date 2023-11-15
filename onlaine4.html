@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt -br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="elemeto"><video id="video" controls></video>
+
+            <!-- Use hls.js to create a player and load the .m3u8 file -->
+            <script>
+              var video = document.getElementById('video');
+              if(Hls.isSupported()) {
+                var hls = new Hls();
+                hls.loadSource('https://qn-01277-rjoam-1-02-2.claro-tv-live.qwilted-cds.cqloud.com/Content/Channel/SPOESPHD/dsc2/stream_06/Segment-3986490359265016.m4v');
+                hls.attachMedia(video);
+                video.play();
+              }
+              else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                video.src = 'https://qn-01277-rjoam-1-02-2.claro-tv-live.qwilted-cds.cqloud.com/Content/Channel/SPOESPHD/dsc2/stream_08/Segment-3986490340018349.m4a';
+                video.addEventListener('loadedmetadata',function() {
+                  video.play();
+                });
+              }
+             
+            </script>
+            </div>
+    <br><br><br><br>
+    <button chass="button">
+        <a href="index.html">inicio</a>
+        </button>
+    
+</body>
+</html>

@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(img/vingadores.jpg);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.button{
+    display: flex;
+    height: 0px;
+    width: 0px;
+    background-color: brown;
+}
